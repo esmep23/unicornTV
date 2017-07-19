@@ -55,19 +55,25 @@
 		  var videoUrl = tuJSON[link]['link'];
  			console.log(videoUrl);
 		  // Just play a video 
-		  window.plugins.streamingMedia.playVideo(videoUrl);
+		 // window.plugins.streamingMedia.playVideo(videoUrl);
 		 
+ 		console.log('1');
 		  // Play a video with callbacks 
 		  var options = {
 		    successCallback: function() {
 		      console.log("Video was closed without error.");
+ 				console.log(videoUrl);
+ 		console.log('2');
 		    },
 		    errorCallback: function(errMsg) {
+ 		console.log('3');
 		      console.log("Error! " + errMsg);
 		    },
 		    orientation: 'landscape'
 		  };
+ 		console.log('4');
 		  window.plugins.streamingMedia.playVideo(videoUrl, options);
+ 		console.log('5');
 		 
  			console.log(options);
 		
