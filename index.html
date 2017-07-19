@@ -4,7 +4,6 @@
 	<title>Unicorn TV</title>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-	<script type="text/javascript" charset="utf-8" src="video.js"></script>
 </head>
 <body>
 	<h2>Listado de Canales disponibles</h2>
@@ -13,23 +12,23 @@
 	<script type="text/javascript">
 		var tuJSON = {
 			"0":{
-				"link": "rtmp://cdn.liveonearth.com/cdnedge/smil:TWL.smil/playlist.m3u8",
+				"link": "https://cdn.liveonearth.com/cdnedge/smil:TWL.smil/playlist.m3u8",
 				"logo": "http://i.imgur.com/QS0zgK2.png"
 			},
 			"1":{
-				"link": "rtmp://a3live-lh.akamaihd.net:80/i/antena3_1@35248/master.m3u8",
+				"link": "https://a3live-lh.akamaihd.net:80/i/antena3_1@35248/master.m3u8",
 				"logo": "http://www.brandemia.org/sites/default/files/inline/images/antena3_logo_nuevo.jpg"
 			},
 			"2":{
-				"link": "rtmp://aztecalive-lh.akamaihd.net:80/i/0qeij0bji_1@26639/index_3_av-b.m3u8",
+				"link": "https://aztecalive-lh.akamaihd.net:80/i/0qeij0bji_1@26639/index_3_av-b.m3u8",
 				"logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/TvAzteca2015.png/1200px-TvAzteca2015.png"
 			},
 			"3":{
-				"link": "rtmp://209.126.116.177:2086/203Universal/android/chunk_Auth=ix08xZ%5E@6Qg7xc=1/playlist.m3u8",
+				"link": "https://209.126.116.177:2086/203Universal/android/chunk_Auth=ix08xZ%5E@6Qg7xc=1/playlist.m3u8",
 				"logo": "https://i.ytimg.com/vi/IldJ2xyuuk0/maxresdefault.jpg"
 			},
 			"4":{
-				"link": "rtmp://209.126.116.177:2086/305nickelodeon/android/chunk_Auth=ix08xZ%5E@6Qg7xc=1/playlist.m3u8",
+				"link": "https://209.126.116.177:2086/305nickelodeon/android/chunk_Auth=ix08xZ%5E@6Qg7xc=1/playlist.m3u8",
 				"logo": "https://s-media-cache-ak0.pinimg.com/originals/28/1a/68/281a68ffbbd2b3023016f4ab797ce61c.png"
 			}
 		};
@@ -39,8 +38,7 @@
 			$('#listado').append('<li onclick="agregarVideo('+i+')"><img src="'+tuJSON[i]['logo']+'" width="100px" /></li>');
 		}
 	function agregarVideo(link){
-		console.log(link);
-		/*
+		
 		$('#miVideo').empty();
 		$('#miVideo').append('<video id="video" controls></video>');
 		if(Hls.isSupported()) {
@@ -52,8 +50,8 @@
 				video.play();
 			});
 		}
-		*/
-		VideoPlayer.play(“https://www.youtube.com/watch?v=en_sVVjWFKk”);
+		
+		
 	}
 	</script>
 </body>
