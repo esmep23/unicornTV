@@ -38,7 +38,7 @@
 			$('#listado').append('<li onclick="agregarVideo('+i+')"><img src="'+tuJSON[i]['logo']+'" width="100px" /></li>');
 		}
 	function agregarVideo(link){
-		
+		/*
 		$('#miVideo').empty();
 		$('#miVideo').append('<video id="video" controls></video>');
 		if(Hls.isSupported()) {
@@ -49,8 +49,49 @@
 			hls.on(Hls.Events.MANIFEST_PARSED,function() {
 				video.play();
 			});
-		}
+		}*/
 		
+		  var videoUrl = tuJSON[link]['link'];
+ 
+		  // Just play a video 
+		  window.plugins.streamingMedia.playVideo(videoUrl);
+		 
+		  // Play a video with callbacks 
+		  var options = {
+		    successCallback: function() {
+		      console.log("Video was closed without error.");
+		    },
+		    errorCallback: function(errMsg) {
+		      console.log("Error! " + errMsg);
+		    },
+		    orientation: 'landscape'
+		  };
+		  window.plugins.streamingMedia.playVideo(videoUrl, options);
+		 
+		 
+		  var audioUrl = STREAMING_AUDIO_URL;
+		 
+		  // Play an audio file (not recommended, since the screen will be plain black) 
+		  window.plugins.streamingMedia.playAudio(audioUrl);
+		 
+		  // Play an audio file with options (all options optional) 
+		  var options = {
+		    bgColor: "#FFFFFF",
+		    bgImage: "<SWEET_BACKGROUND_IMAGE>",
+		    bgImageScale: "fit", // other valid values: "stretch" 
+		    initFullscreen: false, // true(default)/false iOS only 
+		    successCallback: function() {
+		      console.log("Player closed without error.");
+		    },
+		    errorCallback: function(errMsg) {
+		      console.log("Error! " + errMsg);
+		    }
+		  };
+		  window.plugins.streamingMedia.playAudio(audioUrl, options);
+		 
+		 
+		  // Stop current audio 
+		  window.plugins.streamingMedia.stopAudio();
 		
 	}
 	</script>
