@@ -40,7 +40,7 @@
 	function agregarVideo(link){
 		
 		$('#miVideo').empty();
-		$('#miVideo').append('<video id="video" controls type="application/x-mpegURL"></video>');
+		$('#miVideo').append('<video id="video" controls type="application/x-mpegURL" width="200px"></video>');
 		if(Hls.isSupported()) {
 			var video = document.getElementById('video');
 			var hls = new Hls();
