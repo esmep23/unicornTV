@@ -131,5 +131,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 
-    <plugin name="VideoPlayer" value="com.phonegap.plugins.video.VideoPlayer"/>
+    
 </widget>
