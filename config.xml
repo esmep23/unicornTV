@@ -131,6 +131,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 
-    <gap:plugin name="com.dawsonloudon.videoplayer" version="3.3.0" />
-
+    <plugin name="VideoPlayer" value="com.phonegap.plugins.video.VideoPlayer"/>
 </widget>
