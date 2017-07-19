@@ -131,4 +131,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 
+    <gap:plugin name="com.dawsonloudon.videoplayer" version="1.0.0" />
+
 </widget>

@@ -4,7 +4,7 @@
 	<title>Unicorn TV</title>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
+	<script type="text/javascript" src="VideoPlayer.js"></script>
 </head>
 <body>
 	<h2>Listado de Canales disponibles</h2>
@@ -40,6 +40,7 @@
 		}
 	function agregarVideo(link){
 		console.log(link);
+		/*
 		$('#miVideo').empty();
 		$('#miVideo').append('<video id="video" controls></video>');
 		if(Hls.isSupported()) {
@@ -51,6 +52,8 @@
 				video.play();
 			});
 		}
+		*/
+		VideoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
 	}
 	</script>
 </body>
