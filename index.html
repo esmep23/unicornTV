@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline'; media-src *; connect-src *">
 	<title>Unicorn TV</title>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -39,9 +38,9 @@
 			$('#listado').append('<li onclick="agregarVideo('+i+')"><img src="'+tuJSON[i]['logo']+'" width="100px" /></li>');
 		}
 	function agregarVideo(link){
-		/*
+		
 		$('#miVideo').empty();
-		$('#miVideo').append('<video id="video" controls></video>');
+		$('#miVideo').append('<video id="video" controls type="application/x-mpegURL"></video>');
 		if(Hls.isSupported()) {
 			var video = document.getElementById('video');
 			var hls = new Hls();
@@ -50,9 +49,9 @@
 			hls.on(Hls.Events.MANIFEST_PARSED,function() {
 				video.play();
 			});
-		}*/
+		}
 		
-		  var videoUrl = tuJSON[link]['link'];
+		 /* var videoUrl = tuJSON[link]['link'];
  			console.log(videoUrl);
 		  // Just play a video 
 		 // window.plugins.streamingMedia.playVideo(videoUrl);
@@ -75,7 +74,7 @@
 		  window.plugins.streamingMedia.playVideo(videoUrl, options);
  		console.log('5');
 		 
- 			console.log(options);
+ 			console.log(options);*/
 		
 	}
 	</script>
